@@ -1,20 +1,20 @@
-//your code here
-void setup()
-{
-	//your code here
-}
-void draw()
-{
-	//your code here
-}
-class Particle
-{
-	//your code here
+int nPart = 100;
+ArrayList<Particle> aPart = new ArrayList<Particle>();
+
+void setup() {
+  size(500, 500);
+
+  for (int i = 0; i<nPart; i++) {
+    Particle p = new Particle();
+    aPart.add(p);
+  }
 }
 
-class OddballParticle //inherits from Particle
-{
-	//your code here
+void draw() {
+  background(0);\
+  for (int i = 0; i<nPart; i++) {
+    Particle p = aPart.get(i);
+    p.move();
+    p.show();
+  }
 }
-
-
