@@ -1,12 +1,13 @@
 class Particle {
-  int myX, myY;
-  double myAngle, mySpeed;
+  double myX, myY, myAngle, mySpeed;
+  int myColor;
 
   Particle() {
     myX = width/2;
     myY = height/2;
     myAngle = Math.random()*2*Math.PI;
     mySpeed = Math.random()*50;
+    myColor = color(255);
   }
 
   void move() {
@@ -15,7 +16,7 @@ class Particle {
   }
 
   void show() {
-    ellipse(myX, myY, 10, 10);
+    fill(myColor);
+    ellipse((float)myX, (float)myY, 10, 10);
   }
-  
 }
